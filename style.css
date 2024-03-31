@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body {
+    background-color: rgb(59, 70, 100);
+}
+
+.main-container-cls {
+    width: 300px;
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(59, 70, 100);
+}
+
+.header-container-cls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(226, 229, 231);
+}
+
+.toggle-container-cls {
+    width: 35px;
+}
+
+.theme-container-cls {
+    display: flex;
+    align-items: flex-end;
+}
+
+.number-indicator-cls {
+    font-size: 10px;
+    flex: 1;
+    margin: auto 2.5px;
+}
+
+.toggle-cls {
+    width: 100%;
+    height: 12px;
+    background-color: rgb(38, 45, 67);
+    border-radius: 12px;
+    padding: 3px;
+    cursor: pointer;
+    display: flex;
+}
+
+.ball-cls {
+    height: 100%;
+    width: 5px;
+    background-color: rgb(214, 67, 55);
+    border-radius: 12px;
+    flex: 1;
+    margin: auto 2px;
+}
+
+#toggle2 {
+    opacity: 0;
+}
+
+#toggle3 {
+    opacity: 0;
+}
+
+
+.display-container-cls {
+    background-color: rgb(25, 31, 50);
+    padding-block: 20px;
+    padding-inline: 15px;
+    margin-block: 15px;
+    border-radius: 4px;
+}
+
+.display-inputed-value-cls {
+    font-size: 22px;
+    width: 100%;
+    background-color: transparent;
+    color: rgb(226, 229, 231);
+    outline: none;
+    border: none;
+    direction: rtl;
+}
+
+.number-plat-container-cls {
+    background-color: rgb(37, 45, 68);
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.common-number-row-cls {
+    display: flex;
+    margin-block-end: 20px;
+    gap: 20px;
+}
+
+.common-numbre-cls {
+    background-color: rgb(233, 227, 220);
+    padding: 5px;
+    color: rgb(69, 74, 86);
+    flex: 1;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.common-last-button-cls {
+    background-color: rgb(100, 114, 154);
+    padding: 5px;
+    color: rgb(239, 243, 247);
+    flex: 1;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="script.js"></script>
+    <title>Calculator</title>
+</head>
+
+<body>
+    <div class="main-container-cls">
+        <div class="header-container-cls">
+            <div style="font-size: 20px;">calc.</div>
+            <div class="theme-container-cls">
+                <div style="font-size: 9px;margin-right: 20px;margin-bottom: 2px;">THEME</div>
+                <div class="toggle-container-cls">
+                    <div class="number-inicator-cls" style="display: flex;">
+                        <div class="number-indicator-cls">1</div>
+                        <div class="number-indicator-cls">2</div>
+                        <div class="number-indicator-cls">3</div>
+                    </div>
+                    <div class="toggle-cls">
+                        <div class="ball-cls" style="margin-right: 1px;" id="toggle1"></div>
+                        <div class="ball-cls" id="toggle2"></div>
+                        <div class="ball-cls" style="margin-right: 1px;" id="toggle3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="display-container-cls">
+            <input type="text" class="display-inputed-value-cls" onkeypress="return onlyNumbersAndSymbols(event)" oninput="moveCursorToEnd(this)">
+        </div>
+        <div class="number-plat-container-cls">
+            <div class="common-number-row-cls">
+                <div class="common-numbre-cls">7</div>
+                <div class="common-numbre-cls">8</div>
+                <div class="common-numbre-cls">9</div>
+                <div class="common-numbre-cls" style="background-color: rgb(100, 114, 154); color: rgb(239, 243, 247);">
+                    DEL</div>
+            </div>
+            <div class="common-number-row-cls">
+                <div class="common-numbre-cls">4</div>
+                <div class="common-numbre-cls">5</div>
+                <div class="common-numbre-cls">6</div>
+                <div class="common-numbre-cls">+</div>
+            </div>
+            <div class="common-number-row-cls">
+                <div class="common-numbre-cls">1</div>
+                <div class="common-numbre-cls">2</div>
+                <div class="common-numbre-cls">3</div>
+                <div class="common-numbre-cls">-</div>
+            </div>
+            <div class="common-number-row-cls" style="margin-block-end: 0px;">
+                <div class="common-last-button-cls">RESET</div>
+                <div class="common-last-button-cls" style="background-color: rgb(209, 63, 48);">=</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

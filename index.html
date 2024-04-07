@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Author: Sunder Mishra -->
+<!-- Description: This is a simple mathematical calculator with multiple themes -->
+<!-- Email: sundermishra734@gamil.com -->
 
 <head>
     <meta charset="UTF-8">
@@ -36,34 +39,60 @@
             </div>
         </div>
         <div class="display-container-cls">
-            <input type="text" class="display-inputed-value-cls" onkeypress="return onlyNumbersAndSymbols(event)" oninput="moveCursorToEnd(this)">
+            <input type="text" id="inputData" class="display-inputed-value-cls"
+                onkeypress="return onlyNumbersAndSymbols(event)" oninput="moveCursorToEnd(this)">
         </div>
         <div class="number-plat-container-cls">
             <div class="common-number-row-cls">
-                <div class="common-numbre-cls">7</div>
-                <div class="common-numbre-cls">8</div>
-                <div class="common-numbre-cls">9</div>
-                <div class="common-numbre-cls" style="background-color: rgb(100, 114, 154); color: rgb(239, 243, 247);">
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="7">7
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="8">8
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="9">9
+                </div>
+                <div class="common-numbre-cls" style="background-color: rgb(100, 114, 154); color: rgb(239, 243, 247);"
+                    onclick="numberOperatorEnter(this.getAttribute('value'))" value="DEL">
                     DEL</div>
             </div>
             <div class="common-number-row-cls">
-                <div class="common-numbre-cls">4</div>
-                <div class="common-numbre-cls">5</div>
-                <div class="common-numbre-cls">6</div>
-                <div class="common-numbre-cls">+</div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="4">4
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="5">5
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="6">6
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="+">+
+                </div>
             </div>
             <div class="common-number-row-cls">
-                <div class="common-numbre-cls">1</div>
-                <div class="common-numbre-cls">2</div>
-                <div class="common-numbre-cls">3</div>
-                <div class="common-numbre-cls">-</div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="1">1
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="2">2
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="3">3
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="-">-
+                </div>
+            </div>
+            <div class="common-number-row-cls">
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="0">0
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value=".">.
+                </div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="/">
+                    &divide;</div>
+                <div class="common-numbre-cls" onclick="numberOperatorEnter(this.getAttribute('value'))" value="*">x
+                </div>
             </div>
             <div class="common-number-row-cls" style="margin-block-end: 0px;">
-                <div class="common-last-button-cls">RESET</div>
-                <div class="common-last-button-cls" style="background-color: rgb(209, 63, 48);">=</div>
+                <div class="common-last-button-cls" onclick="numberOperatorEnter(this.getAttribute('value'))"
+                    value="RESET">RESET</div>
+                <div class="common-last-button-cls" style="background-color: rgb(209, 63, 48);"
+                    onclick="numberOperatorEnter(this.getAttribute('value'))" value="=">=</div>
             </div>
         </div>
     </div>
+    <div class="author-detail-container">Made by - Sunder Mishra</div>
 </body>
 
 </html>

@@ -1,2 +1,2 @@
 # Calculator
-This is a Mathematical Calculator
+This is a mathematical calculator with multiple themes.

@@ -1,3 +1,6 @@
+// Author: Sunder Mishra
+// Description: This is a simple mathematical calculator with multiple themes
+// Email: sundermishra734@gamil.com
 $(document).ready(function () {
     $("#toggle1").click(function () {
         $(this).css("opacity", "1");
@@ -7,7 +10,6 @@ $(document).ready(function () {
         $(".display-container-cls, .toggle-cls").css("background-color", "rgb(25, 31, 50)");
         $(".number-plat-container-cls").css("background-color", "rgb(37, 45, 68)");
         $(".common-numbre-cls").css("background-color", "rgb(233, 227, 220)");
-
         $(".common-last-button-cls, .ball-cls").css("background-color", "rgb(209, 63, 48)");
         $(".common-number-row-cls:first-child .common-numbre-cls:nth-child(4), .common-last-button-cls:first-child").css("background-color", "rgb(100, 114, 154)");
         $(".main-container-cls").css("background-color", "rgb(59, 70, 100)");
@@ -21,7 +23,6 @@ $(document).ready(function () {
         $(".display-container-cls, .toggle-cls").css("background-color", "rgb(62 92 13)");
         $(".number-plat-container-cls").css("background-color", "rgb(63 90 12)");
         $(".common-numbre-cls").css("background-color", "rgb(220 233 227)");
-
         $(".common-last-button-cls, .ball-cls").css("background-color", "rgb(209 140 48)");
         $(".common-number-row-cls:first-child .common-numbre-cls:nth-child(4), .common-last-button-cls:first-child").css("background-color", "rgb(125 154 100)");
         $(".main-container-cls").css("background-color", "rgb(110, 141, 9)");
@@ -35,7 +36,6 @@ $(document).ready(function () {
         $(".display-container-cls, .toggle-cls").css("background-color", "rgb(96 38 120)");
         $(".number-plat-container-cls").css("background-color", "rgb(99 50 116)");
         $(".common-numbre-cls").css("background-color", "rgb(207 179 223)");
-
         $(".common-last-button-cls").css("background-color", "rgb(157 170 64)");
         $(".ball-cls").css("background-color", "rgb(194 210 79)");
         $(".common-number-row-cls:first-child .common-numbre-cls:nth-child(4), .common-last-button-cls:first-child").css("background-color", "rgb(150 84 172)");
@@ -53,5 +53,31 @@ function onlyNumbersAndSymbols(event) {
 function moveCursorToEnd(input) {
     input.setSelectionRange(input.value.length, input.value.length);
 }
-
+var expression = '';
+function numberOperatorEnter(value) {
+    var inputData = $("#inputData").val();
+    if (value == "RESET") {
+        $("#inputData").val('');
+        expression = '';
+    }
+    else if (value == "=") {
+        try {
+            var result = eval(expression);
+            $("#inputData").val(result);
+            expression = '';
+        } catch (error) {
+            inputData = "Invalid Expression";
+            $("#inputData").val(inputData);
+            expression = '';
+        }
+    }
+    else if (value == "DEL") {
+        expression = expression.slice(0, -1);
+        $("#inputData").val(expression);
+    }
+    else {
+        expression += value;
+        $("#inputData").val(expression);
+    }
+}
 
